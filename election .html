@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .a{
+            border: 2px solid black;
+            height: 500px;
+            width: 400px;
+            position: absolute;
+            left: 39%;
+            top: 18%;
+        }
+        .b{
+            width: 80%;
+            height: 10%;
+            position: absolute;
+            left: 10%;
+            top: 2%;
+        }
+        .c{
+            width: 80%;
+            height: 10%;
+            position: absolute;
+            left: 10%;
+            top: 17%;
+        }
+        .d{
+            width: 80%;
+            height: 10%;
+            position: absolute;
+            left: 10%;
+            top: 32%;
+        }
+        .e{
+            width: 80%;
+            height: 10%;
+            position: absolute;
+            left: 10%;
+            top: 47%;
+        }
+        .f{
+            width: 80%;
+            height: 10%;
+            position: absolute;
+            left: 10%;
+            top: 63%;
+        }
+        .g{
+            width: 80%;
+            height: 10%;
+            position: absolute;
+            left: 10%;
+            top: 79%;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <button class="b">Know your constituency</button>
+        <button class="c">Current Elections</button>
+        <button class="d">Upcoming Elections</button>
+        <button class="e">Term of the Houses</button>
+        <button class="f">Past Elections <br>(General Election,Assembly Election,Bye-Election)</button>
+        <button class="g">Election Results</button>
+    </div>
+    <script>
+        function buttonClick(event) {
+            const buttonText = event.target.textContent;
+            switch (buttonText) {
+                case 'Know your constituency':
+                    alert('Know your constituency clicked');
+                    break;
+                case 'Current Elections':
+                    alert('Current Elections clicked');
+                    break;
+                case 'Upcoming Elections':
+                    alert('Upcoming Elections clicked');
+                    break;
+                case 'Term of the Houses':
+                    alert('Term of the Houses clicked');
+                    break;
+                case 'Past Elections \n(General Election,Assembly Election,Bye-Election)':
+                    alert('Past Elections clicked');
+                    break;
+                case 'Election Results':
+                    alert('Election Results clicked');
+                    break;
+                default:
+                    break;
+            }
+        }
+        const buttons = document.querySelectorAll('.a button');
+        buttons.forEach(button => {
+            button.addEventListener('click', buttonClick);
+        });
+
+    </script>
+</body>
+</html>

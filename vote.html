@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Voting Website</title>
+  <link rel="stylesheet" type="text/css" href="vote.css">
+</head>
+<body>
+  <div class="a">
+    <h1>Karpagam college of Engineering</h1>
+
+    <h2>Select an date of your semester</h2>
+    <form id="voting-form">
+      <label for="candidate1">
+        <input type="radio" id="candidate1" name="candidate" value="Candidate 1">
+       10<sup>th</sup>Augest
+      </label><br>
+      <label for="candidate2">
+        <input type="radio" id="candidate2" name="candidate" value="Candidate 2">
+        21<sup>st</sup>Augest
+      </label><br>
+      <label for="candidate3">
+        <input type="radio" id="candidate3" name="candidate" value="Candidate 3">
+        1<sup>st</sup>September
+      </label><br>
+    </form><p id="suc"></p>
+      <button type="submit" onclick=vot()>Vote</button>
+  <p>&copy; 2023 E-Voting System. All rights reserved.</p>
+  <script src="vote.js"></script></div>
+</body>
+</html>

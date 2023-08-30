@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stopwatch</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+.stopwatch {
+    text-align: center;
+}
+.time {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+}
+.button:hover {
+    background-color: #2980b9;
+}
+    </style>
+</head>
+<body>
+    <div class="stopwatch">
+        <div class="time" id="display">00:00:00</div>
+        <button class="button" id="startStop" onclick="startStop()">Start</button>
+        <button class="button" id="reset" onclick="reset()">Reset</button>
+    </div>
+    <script>
+        let timer;
+let isRunning = false;
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+function startStop() {
+    if (isRunning) {
+        clearInterval(timer);
+        document.getElementById("startStop").textContent = "Start";
+    } else {
+        timer = setInterval(updateTime, 1000);
+        document.getElementById("startStop").textContent = "Stop";
+    }
+    isRunning = !isRunning;
+}
+function updateTime() {
+    seconds++;
+    if (seconds >= 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes >= 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+    updateDisplay();
+}
+function updateDisplay() {
+    const display = document.getElementById("display");
+    display.textContent = `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+}
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+}
+function reset() {
+    clearInterval(timer);
+    isRunning = false;
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    updateDisplay();
+    document.getElementById("startStop").textContent = "Start";
+}
+updateDisplay();
+    </script>zzzz
+</body>
+</html>

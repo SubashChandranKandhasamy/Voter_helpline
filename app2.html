@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voter helpline</title>
+    <style>
+        .a{
+            border: 2px solid black;
+            height: 500px;
+            width: 400px;
+            position: absolute;
+            left: 39%;
+            top: 18%;
+            text-align: center;
+        }
+        .b{
+            border: 2px solid black;
+            height: 50px;
+            width: 398px;
+            background-color: rgb(31, 31, 131);
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        } 
+        b{
+            
+            color: blue;
+            font-size: 20px;
+        }
+        .q{
+            position: absolute;
+            top: 90%;
+            
+        }
+        .w{
+            position: absolute;
+            top: 90%;
+            left: 54%;
+        }
+        .p{
+            position: absolute;
+            left: 19%;
+        }
+        </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b"><p>Language</p></div><br><br><br>
+        <b>Choose a Language</b><br><br>
+        <div class="p"><table>
+        <tr>
+        <td><input type="radio" required name="as">English</td>
+        <td><input type="radio" required name="as">हिन्दी</td>
+        <td> <input type="radio" required name="as">ਪੰਜਾਬੀ</td>
+    </tr>
+    <tr>
+        <td><input type="radio" required name="as">தமிழ்</td>
+        <td><input type="radio" required name="as">മലയാളം</td>
+        <td><input type="radio" required name="as">తెలుగు</td>
+    </tr>
+    <tr>
+        <td><input type="radio" required name="as">বাংলা</td>
+        <td><input type="radio" required name="as">অসমীয়া</td>
+        <td><input type="radio" required name="as">ଓଡ଼ିଆ</td>
+    </tr>
+    <tr>
+        <td><input type="radio" required name="as">ಕನ್ನಡ</td>
+        <td><input type="radio" required name="as">ગુજરાતી</td>
+        <td><input type="radio" required name="as">मराठी</td> 
+    </tr>
+    </table></div>
+    </div>
+    <center><button class="q">Cancel</button>
+        <form action="app3.html">
+    <button class="w">Submit</button></form></center>
+    <script>
+function handleSubmitButtonClick() {
+    const selectedLanguage = document.querySelector('input[name="as"]:checked');
+    if (selectedLanguage) {
+        window.location.href = 'app3.html';
+    } else {
+        alert('Please choose a language before submitting.');
+    }
+}
+document.querySelector('.w').addEventListener('click', handleSubmitButtonClick);
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Voter helpline</title>
+    <style>
+        .x{
+            border: 2px solid black;
+            height: 500px;
+            width: 400px;
+            position: absolute;
+            left: 39%;
+            top: 18%;
+            
+        }
+        p{
+            
+            padding: 20px;
+            text-align:justify ;
+            overflow-y: scroll;
+            height: 400%;
+        }
+
+        p.first { text-indent: 5em; }
+
+        img{
+            height: 100px;
+            width: 400px;
+        }
+        button{
+            position: absolute;
+            top: 90%;
+        }.a{
+            position: absolute;
+            top: 87%;
+            left: 50%;
+        }
+        .b{
+            position: absolute;
+            top: 87%;
+            left: 51.5%;
+        }
+        .q{
+            width: 400px;
+            height: 70px;
+            border: 2px solid black;
+            position: absolute;
+            top: 31%;
+            left: 39%;
+        }
+    </style>
+</head>
+<body>
+    <div class="x">
+        <img src="maxresdefault.jpg" alt="image">
+    </div>
+    <center><input type="radio" class="a"><div class="b"> I agree</div>
+    <form action="app2.html"><button type="submit">Next</button></center></form>
+    <center><div class="q"><h1>Disclaimer</h1>
+        <p><b> Voter Helpline Application:</b><br>
+        We thank you for sparing your valuable time for using Voter Helpline Application. Before proceeding further, we encourage you to read the terms carefully and agree to abide by it. Should you have any reservations about the following terms set out for the app, you are free to exit and uninstall the app.
+        
+        This version of the Voter Helpline App has been built on the basis of functional testing and feedback through beta testing. Additional inputs from the users for this version shall be evaluated on their merit, and only suggestions found suitable by ECI shall be incorporated in the iterative builds and consequential final release of the app. Therefore, you are encouraged to always use the latest build of the Voter Helpline App whenever updates are available.
+        
+        The Voter Helpline App offers the convenience to all Citizens of finding names in the electoral roll, submitting online forms, checking the status of the application, filing complaints, viewing results, affidavits, counter-affidavits, and receiving the reply on their mobile app. With few clicks and minimal information, the user can find his/her voter id</p></div></center>
+        <script>
+function handleNextButtonClick() {
+    const agreeCheckbox = document.querySelector('.a');
+    if (agreeCheckbox.checked) {
+        window.location.href = 'app2.html';
+    } else {
+        alert('Please agree to the disclaimer before proceeding.');
+    }
+}
+document.querySelector('button').addEventListener('click', handleNextButtonClick);
+        </script>
+</body>
+</html>

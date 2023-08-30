@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .a{
+            border: 2px solid black;
+            height: 500px;
+            width: 400px;
+            position: absolute;
+            left: 39%;
+            top: 18%;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+      <center> <h2> <a href="">Guest User</a></h2>
+        <a href="">Profile & other settings</a><br><br>
+        <select>
+            <option>Voter Services</option>
+            <option>New voter Registration(Form 6B)</option>
+            <option>Deletion(Form 7)</option>
+            <option>Correction of entries</option>
+            <option>Aadhaar Number Submission(Form 6B)</option>
+            <option>Status of Application</option>
+            <option>Lodge Grievance</option>
+            <option>Check status of Grievance</option>
+        </select><br><br>
+        <select>
+            <option>Voter Education</option>
+            <option>Eldction</option>
+            <option>EVM</option>
+            <option>Technology</option>
+            <option>-----------------------------------------------------</option>
+        </select><br><br>
+        <select>
+            <option>Elections</option>
+            <option>Current Election</option>
+            <option>Past Election</option>
+            <option>Future Election</option>
+            <option>-----------------------------------------------------</option>
+        </select><BR></BR>
+        <a href="">CANDIDATE/POLITICAL PARTIES</a><br><br>
+        <select>
+            <option>Media and Publication</option>
+            <option>Newsletter</option>
+            <option>Eci Publication</option>
+            <option>Important Instructions</option>
+            <option>Evm Audio File</option>
+            <option>Hand Book</option>
+            <option>Manuals</option>
+            <option>Compendium of Instructions</option>
+            <option>Statistical Repoet</option>
+            <option>-----------------------------------------------------</option>
+        </select><br><br>
+        <select>
+            <option>ABOUT ELECTION COMMISION OF INDIA</option>
+            <option>About Hon'ble Commision</option>
+            <option>Commison Setup</option>
+            <option>Officials Contact Details</option>
+            <option>Contact Details of CEOs</option>
+            <option>-----------------------------------------------------</option></select><br><br>
+            <a href="tel:7538841098">Contact us</a><br><br>
+            <select>
+                <option>LEGAL</option>
+                <option><button onclick="term()">Term and services</button></option>
+                <option>Privacy Policy</option>
+                <option>Disclaimer</option>
+                <option>-----------------------------------------------------</option></select>
+                <h3>SHARE APP</h3>
+                App Version : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v9.5.5
+      </center>
+    </div>
+    <script>
+function term() {
+    alert("Coming soon");
+}
+document.querySelector('.a select button').addEventListener('click', term);
+document.querySelector('.a select:nth-child(3)').addEventListener('change', function(event) {
+    const selectedOption = event.target.value;
+    alert(`Selected Voter Service: ${selectedOption}`);
+});
+document.querySelector('.a select:nth-child(5)').addEventListener('change', function(event) {
+    const selectedOption = event.target.value;
+    alert(`Selected Voter Education: ${selectedOption}`);
+});
+document.querySelector('.a select:nth-child(7)').addEventListener('change', function(event) {
+    const selectedOption = event.target.value;
+    alert(`Selected Election: ${selectedOption}`);
+});
+document.querySelector('.a select:nth-child(9)').addEventListener('change', function(event) {
+    const selectedOption = event.target.value;
+    alert(`Selected Media and Publication: ${selectedOption}`);
+});
+document.querySelector('.a select:nth-child(11)').addEventListener('change', function(event) {
+    const selectedOption = event.target.value;
+    alert(`Selected About Election Commission of India: ${selectedOption}`);
+});
+    </script>
+</body>
+</html>

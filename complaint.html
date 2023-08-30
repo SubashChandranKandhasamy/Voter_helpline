@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        .a{
+            border: 2px solid black;
+            height: 500px;
+            width: 400px;
+            position: absolute;
+            left: 39%;
+            top: 18%;
+        }
+        .b{
+            width: 100%;
+        }
+        .q{
+            position: absolute;
+            left: 47%;
+            top: 90%;
+        }
+        .w{
+            position: absolute;
+            left: 53%;
+            top: 90%;
+        }
+    </style>
+</head>
+<body>
+    <center><h1 style="color: blue;">Complaint</h1></center>
+    <div class="a"><br>
+       <center>Mobile: <input type="number"><br><br>
+        <select name="" id="b">
+            <option value="se">Select State</option>
+            <option value="tn">Tamilnadu</option>
+            <option value="ad">Andra Pradesh</option>
+        </select><br><br>
+        <select name="" id="">
+            <option value="dis">Select District</option>
+        </select><br><br>
+        <select>
+            <option value="assembly">Select Assembly</option>
+        </select><br><br>
+        <select>
+            <option>Select Catagory</option>
+        </select><br><br>
+        <select>
+            <option>Select SubCatagory</option>
+        </select><br><br>
+        <select>
+            <option>Select Subject Type</option>
+        </select><br><br>
+        Email: <br>
+        <input type="email" required placeholder="Email"><br><br>
+        Describe the incident: <br>
+        <textarea cols="30" rows="5" placeholder="Enter comments/description"></textarea><br>
+        Choose attachments: <br>
+        <input type="file">
+    </center>
+    </div>
+    <button class="q">Cancel</button>
+    <form action=""><button class="w">Submit</button></form>
+    <script>
+        document.querySelector('.w').addEventListener('click', function(event) {
+            event.preventDefault();
+            alert('Form submitted!');
+        });
+        document.querySelector('.q').addEventListener('click', function() {
+            alert('Form canceled!');
+        });
+    </script>
+</body>
+</html>

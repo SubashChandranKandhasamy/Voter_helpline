@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  h1 {
+    margin: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  h2 {
+    color: #333;
+  }
+  form {
+    margin-top: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    background-color: #555;
+    
+  }
+  div{
+    border: 10px solid black;
+    text-align: center;
+    width: 500px;
+    top: 23%;
+    left: 35%;
+    position: absolute;
+    box-shadow: 0px 0px 40px aqua;
+    animation-name: ass;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+  }
+  @keyframes ass{
+    0%{color: red;}
+    25%{color: blue;}
+    50%{color: green;}
+    75%{color: yellow;}
+    100%{color: blueviolet}
+}
